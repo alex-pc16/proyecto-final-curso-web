@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Barra de Búsqueda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, main, footer {
+            text-align: center;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="search"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: -1px;
+            background-color: #f9f9f9;
+        }
+        li.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+    </header>
+
+    <main>
+        <form id="searchForm">
+            <input type="search" id="searchInput" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <ul id="itemList">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página Web</p>
+    </footer>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const items = document.querySelectorAll('#itemList li');
+            items.forEach(function(item) {
+                if (item.textContent.toLowerCase().includes(query)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

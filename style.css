@@ -1,0 +1,215 @@
+.contenedor-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ".  titulo  cont";
+    background-color: aqua;
+}
+
+h1{
+    grid-area: titulo;
+    text-align: center;
+
+    font-size: 80px;
+}
+
+.cont-busqueda-redes{
+    grid-area: cont;
+ 
+
+    display: flex;
+    align-items: center;
+}
+.redes{
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+#busqueda{
+    padding: 14px;
+    border-radius:15px 0 0 15px;
+    
+}
+button{
+    padding: 14px;
+}
+form{
+    display: flex;
+}
+
+nav{
+    font-size: 30px;
+    padding: 20px 150px 20px 150px;
+
+    background-color: rgb(165, 110, 42);
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid;
+    
+}
+
+nav a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: brown;
+}
+
+.hero{
+    border: 2px solid;
+    
+    color: aliceblue;
+    text-align: center;
+    font-size: 35px;
+    padding: 80px;
+    background-image: url("imagenes/portada.jpg");
+}
+
+.hero h2, .hero p{
+    width:70%;
+    margin: auto;
+}
+/* Estilos seccion recomendaciones*/
+
+.libro-img{
+    width: 200px;
+}
+
+.libro-img img{
+    width: 100%;
+}
+
+.cont-libro-recomendaciones{
+    display: flex;
+    justify-content: space-around;
+}
+
+.libros-recomendados{
+    padding: 60px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    padding: 20px;
+}
+/* aplica los estilos a la clase card solo si el cursos esta sobre el elemento*/
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px gray;
+}
+
+.card__boton{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+}
+.cont-libros{
+    display: flex;
+    overflow-x:scroll;
+}
+
+.card-libros{
+    margin: 0 50px;
+}
+.card-precio-boton{
+    display: flex;
+}
+
+.card__precio{
+    margin-right: 20px;
+}
+
+.conocenos{
+    display: flex;
+}
+.conocenos-img{
+    width: 50%;
+    padding: 40px;
+}
+.conocenos-texto{
+    width: 50%;
+    padding: 40px;
+}
+.conocenos-img img{
+    width: 100%;
+}
+.centrar{
+    text-align: center;
+}
+
+/* estilos del footer
+footer{
+    border: 3px solid red;
+    
+    background-color: rgb(255, 204, 121);
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:30px
+    
+}
+
+footer section{
+    border: 2px solid blue;
+}
+
+.copy{
+    grid-column: 1/4;
+    text-align: center;
+}
+
+footer section h2{
+    border-bottom: 4px solid white;
+    padding-bottom: 18px;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+footer ul li{
+    margin-bottom: 18px;
+}
+#correo{
+    padding: 16px;
+}
+    */
+
+footer{
+    padding: 50px;
+    background-color: bisque;
+}
+.cont-footer{
+    display: flex;
+}
+
+.cont-footer section{
+    width: 300px;
+    flex-grow: 1;
+    margin: 0 40px;
+}
+
+.copy{
+    text-align: center;
+}
+
+.cont-footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+.cont-footer li{
+    margin-bottom: 16px;
+}
+
+.footer-redes{
+    text-align: center;
+    font-size: 30px;
+}
